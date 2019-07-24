@@ -96,6 +96,7 @@ public class BasePage {
         return yaml.load(stream);
     }
 
+
     public void printLog(String message) {
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         Calendar cal = Calendar.getInstance();

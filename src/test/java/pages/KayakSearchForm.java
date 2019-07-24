@@ -39,6 +39,7 @@ public class KayakSearchForm extends KayakLanding {
         } else {
             sendKeys(originInputText, origin);
             click(originNearby);
+            printLog("Nearby checkbox selected");
         }
         click(nothing);
     }
@@ -49,17 +50,20 @@ public class KayakSearchForm extends KayakLanding {
         click(destinationInputField);
         sendKeys(destinationInputText, destination);
         click(destNearby);
+        printLog("Nearby checkbox selected");
         click(nothing);
     }
 
     public void enterDepartureDate(String departure){
         click(departureDate);
         sendKeys(departureDateInput, departure);
+        printLog("Departure date selected");
     }
 
-    public void enterReturnDate(String arrival){
+    public void enterReturnDate(String returningDate){
         click(returnDate);
-        sendKeys(returnDateInput, arrival);
+        sendKeys(returnDateInput, returningDate);
+        printLog("Return date selected");
         click(nothing);
     }
 
