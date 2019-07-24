@@ -37,14 +37,14 @@ public class KayakSteps extends BasePage {
             }
 
     @Then("^I enter origin city as \"([^\"]*)\"$")
-    public void iEnterOriginCity(String origin) {
+    public void iEnterOriginCity(String origin) throws InterruptedException {
         kayakSearchForm.enterOrigin(origin);
         printLog("Origin city selected");
         this.originCity = origin;
     }
 
     @And("^I enter destination city as \"([^\"]*)\"$")
-    public void iEnterDestinationCity(String destination) {
+    public void iEnterDestinationCity(String destination) throws InterruptedException {
         kayakSearchForm.enterDestination(destination);
         printLog("Destination city selected");
         this.destinationCity = destination;
@@ -80,6 +80,4 @@ public class KayakSteps extends BasePage {
         printLog("Compairing destinations");
         searchResult.compareDestinations(originCity, destinationCity);
     }
-
-
 }

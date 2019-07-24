@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class KayakSearchForm extends KayakLanding {
+
+    // set locators
     @FindBy(xpath = "//section[@class='title-section']")
     private WebElement nothing;
     @FindBy(xpath = "//*[contains(@id, 'origin-airport-display')]")
@@ -31,8 +33,9 @@ public class KayakSearchForm extends KayakLanding {
 
 
 
-    public void enterOrigin(String origin) {
+    public void enterOrigin(String origin) throws InterruptedException {
         click(originInput);
+        Thread.sleep(250);
         if (originInput.findElements(By.xpath("(//*[contains(@class, 'Button-No-Standard-Style js-remove-selection')])[3]")).size() > 0) {
             click(originInput.findElement(By.xpath("(//*[contains(@class, 'Button-No-Standard-Style js-remove-selection')])[3]")));
             sendKeys(originInputText, origin);
@@ -46,8 +49,9 @@ public class KayakSearchForm extends KayakLanding {
 
 
 
-    public void enterDestination(String destination){
+    public void enterDestination(String destination) throws InterruptedException {
         click(destinationInputField);
+        Thread.sleep(250);
         sendKeys(destinationInputText, destination);
         click(destNearby);
         printLog("Nearby checkbox selected");
