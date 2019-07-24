@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+//Page for Kayak search form
 public class KayakSearchForm extends KayakLanding {
 
     // set locators
@@ -32,7 +33,7 @@ public class KayakSearchForm extends KayakLanding {
 
 
 
-
+    //Enter origin city
     public void enterOrigin(String origin) throws InterruptedException {
         click(originInput);
         Thread.sleep(250);
@@ -48,7 +49,7 @@ public class KayakSearchForm extends KayakLanding {
     }
 
 
-
+    // Enter destination city
     public void enterDestination(String destination) throws InterruptedException {
         click(destinationInputField);
         Thread.sleep(250);
@@ -58,12 +59,14 @@ public class KayakSearchForm extends KayakLanding {
         click(nothing);
     }
 
+    //Enter departure date
     public void enterDepartureDate(String departure){
         click(departureDate);
         sendKeys(departureDateInput, departure);
         printLog("Departure date selected");
     }
 
+    //enter Return date
     public void enterReturnDate(String returningDate){
         click(returnDate);
         sendKeys(returnDateInput, returningDate);

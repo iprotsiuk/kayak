@@ -15,17 +15,10 @@ import static support.TestContext.*;
 
 public class Hooks {
 
-//    @BeforeClass
-//    public static void init(){
-//        TestContext.initialize();
-//        setDriver("chrome");
-//    }
-
 
 
     @Before(order = 0)
     public void scenarioStart() {
-//        TestContext.initialize();
         getDriver().manage().deleteAllCookies();
     }
 
@@ -35,6 +28,5 @@ public class Hooks {
             File scrFile = ((TakesScreenshot)getDriver()).getScreenshotAs(OutputType.FILE); // Now you can do whatever you need to do with it, for example copy somewhere
             FileUtils.copyFile(scrFile, new File(getResourcesPath("screenshots", addTimeStamp())+".png"));
         }
-//        TestContext.close();
     }
 }

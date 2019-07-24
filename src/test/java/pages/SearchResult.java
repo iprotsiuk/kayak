@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import static support.TestContext.getDriver;
 
-
+//Page for the Kayak result page
 public class SearchResult extends BasePage {
     @FindBy(xpath = "//div[contains(@id, 'dialog-content')]//a[contains(@id, 'close')]")
     private WebElement closeAds;
@@ -15,6 +15,8 @@ public class SearchResult extends BasePage {
     @FindBy(xpath = "/html/body/div[3]/div[1]/div/div[1]/div/div/div/div[2]/div[1]/div[1]/div[1]/span[3]")
     private WebElement destinationAddress;
 
+
+    //close ads when landing on a result page
     public void closeAds() {
         click(closeAds);
     }

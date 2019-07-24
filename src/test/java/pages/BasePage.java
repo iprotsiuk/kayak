@@ -17,6 +17,7 @@ import java.util.HashMap;
 
 import static support.TestContext.*;
 
+//BasePage. Parent page with methods which can be used over all the pages
 public class BasePage {
 
     private String url;
@@ -50,7 +51,7 @@ public class BasePage {
         try {
             element.click();   // try to normal click
         } catch (WebDriverException e) {
-            clickWithJS(element); // if dosn't work try with JS click
+            clickWithJS(element); // if doesn't work try with JS click
         }
 
     }

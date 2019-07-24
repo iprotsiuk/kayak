@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         plugin = {"pretty", "html:target/cucumber", "json:target/cucumber/report.json"},
         features = "src/test/resources/features",
         glue = {"definitions", "support"},
-        tags = {"@kayak"} // same as VM option -Dcucumber.options="--tags @predefined1"
+        tags = {"@kayak"} // select tags to run
 )
 public class TestRunner {
 

@@ -63,9 +63,10 @@ public class KayakSteps extends BasePage {
     }
 
     @When("^I click submit$")
-    public void iClickSubmit(){
+    public void iClickSubmit() throws InterruptedException {
         kayakLanding.submit();
         printLog("Submit button clicked");
+        Thread.sleep(5000);
     }
 
     @Then("^I close the ads$")
